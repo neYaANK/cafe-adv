@@ -1,0 +1,19 @@
+﻿<Window x:Class="Cafe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe" xmlns:usercontrols="clr-namespace:Cafe.UserControls;assembly=Cafe.WPF.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        
+        <usercontrols:LoginUserControl Name="login"
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center"
+                                       Width="400"
+                                       LoginResult="login_LoginResult"/>
+         <DataGrid x:Name="dg" Visibility="Collapsed"></DataGrid>
+    </Grid>
+
+</Window>
