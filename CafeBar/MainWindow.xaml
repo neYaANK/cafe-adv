@@ -1,9 +1,9 @@
-﻿<Window x:Class="Cafe.MainWindow"
+﻿<Window x:Class="CafeBar.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Cafe" xmlns:usercontrols="clr-namespace:Cafe.UserControls;assembly=Cafe.WPF.UserControls"
+        xmlns:local="clr-namespace:CafeBar" xmlns:usercontrols="clr-namespace:Cafe.UserControls;assembly=Cafe.WPF.UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
@@ -11,7 +11,7 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition Width="175"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
@@ -25,7 +25,7 @@
 
 
 
-                <DataGrid x:Name="WaiterDG" Grid.Row="1" Tag="None" IsReadOnly="True" ></DataGrid>
+                <DataGrid x:Name="BarPanel" Grid.Row="1" Tag="None" IsReadOnly="True" ></DataGrid>
                 <Label x:Name="Output" Grid.Row="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
             </Grid>
 
@@ -37,18 +37,14 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
                     <RowDefinition Height="200"/>
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Click="Button_Click" >Show my tables</Button>
-                <Button Grid.Row="1" Click="Button_Click_1">Add order</Button>
-                <Button Grid.Row="2" Click="Button_Click_3">Show all ready-to-serve dishes</Button>
-                <Button Grid.Row="3" Click="Button_Click_5">Show all not-paid orders</Button>
-                <Button Grid.Row="4" Click="Button_Click_6">Mark this dish as served</Button>
-                <Button Grid.Row="5" Click="Button_Click_2">Check-out selected order</Button>
-                
-                
+                <Button Grid.Row="0" Click="Button_Click" >Show orders</Button>
+                <Button Grid.Row="1" Click="Button_Click_1">Take this order</Button>
+                <Button Grid.Row="2" Click="Button_Click_2">Show my orders</Button>
+                <Button Grid.Row="3" Click="Button_Click_3">Mark this order as finished</Button>
+
+
 
 
             </Grid>
@@ -62,7 +58,6 @@
                                        HorizontalAlignment="Center"
                                        Width="400"
                                        LoginResult="login_LoginResult" Visibility="Collapsed"/>
-         
-    </Grid>
 
+    </Grid>
 </Window>

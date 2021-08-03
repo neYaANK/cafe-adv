@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cafe.Models
+namespace CafeAdmin
 {
-    public enum AccessLevel
+    public enum CafeFrame
     {
-        Admin = 1,
-        Waiter = 2,
-        Barmen =3,
-        Cook=4
+        Login, Main
     }
 }

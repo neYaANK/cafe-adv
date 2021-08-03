@@ -1,11 +1,6 @@
 ﻿using Cafe.Data;
 using Cafe.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CafeAdmin.Data
 {
@@ -23,6 +18,8 @@ namespace CafeAdmin.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<User>().HasData(new User[] { User.DefaultAdmin, User.User1, User.User2, User.User3, User.User4, User.User5 });
             modelBuilder.Entity<UserAccesLevel>().HasData(new UserAccesLevel[] { UserAccesLevel.DefaultAdminAccessLevel, UserAccesLevel.User1AccessLevel, UserAccesLevel.User2AccessLevel, UserAccesLevel.User3AccessLevel, UserAccesLevel.User4AccessLevel, UserAccesLevel.User5AccessLevel ,UserAccesLevel.User5AccessLevel2});
+            
+        
         }
 
     }

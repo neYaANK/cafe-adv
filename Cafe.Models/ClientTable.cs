@@ -16,14 +16,13 @@ namespace Cafe.Models
         public int Id { get; set; }
 
         public string Name { get; set; }
-        [Column("Примечание",TypeName ="varchar(250)")]
         public string Description { get; set; }
 
+        public int WaiterId { get; set; }
+        public User Waiter { get; set; }
         //[Column(TypeName ="decimal(10,2)")]
-        public decimal Summ { get; set; }
+        //public decimal Summ { get; set; }
 
-        [MaxLength(100)]
-        public string TestLenght { get; set; }
 
     }
 }
